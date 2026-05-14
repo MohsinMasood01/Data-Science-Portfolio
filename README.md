@@ -64,10 +64,10 @@ A deep learning model trained on 4 years of Apple Inc. (AAPL) historical stock d
 
 **Notes:**
 
-- 1,002 trading days (April 2022 — April 2026), 921 sequences generated
+- 1,002 trading days (April 2022 - April 2026), 921 sequences generated
 - Total trainable parameters: 30,651
 - Training loss reduced from 0.0408 (Epoch 1) to 0.0027 (Epoch 20)
-- MAE: $6.46 | RMSE: $8.35 (~3% average error on prices ranging $130—$280)
+- MAE: $6.46 | RMSE: $8.35 (~3% average error on prices ranging $130-$280)
 
 **How to Run:**
 
