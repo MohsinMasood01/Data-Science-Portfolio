@@ -75,3 +75,77 @@ A deep learning model trained on 4 years of Apple Inc. (AAPL) historical stock d
 2. Install dependencies: 'pip install pandas numpy matplotlib scikit-learn tensorflow yfinance'
 3. Run the notebook: 'stock_price_prediction.ipynb'
 4. Data is fetched automatically, no manual download required
+
+---
+
+## Project 3: Customer Segmentation using K-Means Clustering
+A machine learning model trained on the Kaggle Mall Customer dataset to segment customers into distinct groups based on their annual income and spending behaviour using unsupervised learning.
+
+**Tools & Libraries:**
+
+- Python
+- pandas (data manipulation)
+- numpy (numerical operations)
+- matplotlib & seaborn (data visualization)
+- scikit-learn (KMeans clustering, StandardScaler)
+
+**Features:**
+
+- Explores feature distributions using histograms and scatter plots
+- Scales features using StandardScaler to prevent bias from differing value ranges
+- Determines optimal number of clusters using the Elbow Method (inertia vs K)
+- K-Means clustering with K=5 confirmed by both Elbow Method and visual inspection
+- Visualizes 5 customer segments with color-coded scatter plot and centroids
+- Describes each segment using average age, income, and spending score
+
+**Notes:**
+
+- 200 customer samples, 2 features used for clustering (Annual Income, Spending Score)
+- 5 segments identified: Average, High Income High Spending, Low Income High Spending, High Income Low Spending, Low Income Low Spending
+- Youngest group (avg age 25) spent the most relative to income, identified as impulsive buyers
+- Oldest groups (avg age 41-45) were the most financially conservative
+
+**How to Run:**
+
+1. Clone the repository
+2. Install dependencies: 'pip install pandas numpy matplotlib seaborn scikit-learn'
+3. Download the Mall Customer dataset from Kaggle and place *'Mall_Customers.csv'* in the same directory
+4. Run the notebook: 'customer_segmentation.ipynb'
+
+---
+
+## Project 4: Movie Rating Prediction
+A collaborative filtering model trained on the MovieLens 100K dataset to predict how a user might rate a movie they have not seen yet, using SVD matrix factorization to discover hidden patterns in user preferences.
+
+**Tools & Libraries:**
+
+- Python
+- pandas (data manipulation)
+- numpy (numerical operations)
+- matplotlib & seaborn (data visualization)
+- scikit-learn (evaluation metrics)
+- scipy (SVD matrix factorization)
+
+**Features:**
+
+- Merges ratings and movie title data for readability
+- Explores rating distribution and most rated movies via EDA
+- Builds a 610 x 9,719 user-movie utility matrix
+- Applies SVD with k=50 latent factors to discover hidden user preference patterns
+- Reconstructs full predicted ratings matrix for all user-movie combinations
+- Evaluates using MAE and RMSE on known ratings
+- Recommendation function filters already-rated movies and returns top predicted titles per user
+
+**Notes:**
+
+- 100,836 ratings across 610 users and 9,742 movies
+- 50 latent factors learned purely from rating behaviour, no genre or metadata used
+- MAE: 1.53 | RMSE: 2.00 on a 5-star scale
+- Recommendations for User 1 included: Die Hard (1988), The Godfather Part II (1974), and Jaws (1975); consistent with their known preference for crime and thriller films
+
+**How to Run:**
+
+1. Clone the repository
+2. Install dependencies: 'pip install pandas numpy matplotlib seaborn scikit-learn scipy'
+3. Download the MovieLens 100K dataset from Kaggle and place *'ratings.csv'* and *'movies.csv'* in the same directory
+4. Run the notebook: 'movie_rating_prediction.ipynb'
